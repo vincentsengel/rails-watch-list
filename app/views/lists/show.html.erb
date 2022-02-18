@@ -1,5 +1,5 @@
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @list.photo.key, height: 600, corp: :fill  %>);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @list.photo.key, height: 900, corp: :fill  %>);">
   <div class="container">
     <h1><%= @list.name %></h1>
     <p>Add your movies ...</p>
@@ -13,19 +13,19 @@
 </div>
 
 
-<div class="container">
+<div class="container mt-5 mb-5">
   <% @list.bookmarks.each do |bookmark| %>
     <% pict_url = "https://image.tmdb.org/t/p/w200/#{bookmark.movie.poster_url}" %>
     <% movie_id = bookmark.movie.id %>
     <% list_id = List.find(Bookmark.find(bookmark.id).list_id).id %>
-    <div class="card-product">
+    <div class="card-product mt-3 ">
       <%= image_tag pict_url %>
       <div class="card-product-infos">
         <h2><%= bookmark.movie.title %></h2>
         <p> <%= bookmark.movie.overview %> </p>
         <%= link_to list_bookmark_path(Bookmark.find(bookmark.id)), method: :delete, data: { confirm: "this article will be deleted, continue ?"} do %>
             delete
-            <% end %>
+        <% end %>
         </div>
     </div>
   <% end %>
