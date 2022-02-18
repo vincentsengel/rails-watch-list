@@ -1,11 +1,17 @@
-<h1>Bonjour les listes :</h1>
-<% @lists.each do |list| %>
-  <ul>
-    <li>
-      <%= link_to list.name, list_path(list) %>
-    </li>
-  </ul>
-<% end %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://static.fnac-static.com/multimedia/Images/FD/Comete/120558/CCP_IMG_ORIGINAL/1568495.jpg);">
+  <div class="container">
+    <h1>Watch lists</h1>
+    <p>Movies that you may or may not want to watch</p>
+    <%= link_to "Create your own list ...", new_list_path, class: "btn btn-flat" %>
+  </div>
+</div>
 
-<%= link_to "Create your own list ...", new_list_path, class: "btn btn-ghost" %>
-<%= link_to "Back to home", "#", class: "btn btn-ghost" %>
+<div class="container mt-4">
+
+
+  <div class="cards">
+    <% @lists.each do |list| %>
+          <%= link_to list.name, list_path(list), class: 'card-category', style: 'background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)'%>
+    <% end %>
+  </div>
+</div>
