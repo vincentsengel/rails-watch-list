@@ -1,0 +1,11 @@
+<h1>Bonjour les listes :</h1>
+<% @lists.each do |list| %>
+  <ul>
+    <li>
+      <%= link_to list.name, list_path(list) %>
+    </li>
+  </ul>
+<% end %>
+
+<%= link_to "Create your own list ...", new_list_path, class: "btn btn-ghost" %>
+<%= link_to "Back to home", "#", class: "btn btn-ghost" %>
