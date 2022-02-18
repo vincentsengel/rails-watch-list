@@ -19,9 +19,11 @@
     <% movie_id = bookmark.movie.id %>
     <% list_id = List.find(Bookmark.find(bookmark.id).list_id).id %>
     <div class="card-product mt-3 ">
-      <%= image_tag pict_url %>
+      <%= image_tag https://via.placeholder.com/150 %>
+      <%# <%= image_tag pict_url %> %>
       <div class="card-product-infos">
         <h2><%= bookmark.movie.title %></h2>
+        <h3><%= pict_url %></h3>
         <p> <%= bookmark.movie.overview %> </p>
         <%= link_to list_bookmark_path(Bookmark.find(bookmark.id)), method: :delete, data: { confirm: "this article will be deleted, continue ?"} do %>
             delete
