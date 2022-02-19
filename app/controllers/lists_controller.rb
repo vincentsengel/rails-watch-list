@@ -1,7 +1,5 @@
 class ListsController < ApplicationController
 
-  before_action :set_list, only: [ :show ]
-
   def new
     @list = List.new
   end
@@ -27,9 +25,6 @@ class ListsController < ApplicationController
   end
 
   private
-
-  def set_list
-  end
 
   def list_params
     params.require(:list).permit(:name, :photo)

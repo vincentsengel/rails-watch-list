@@ -19,7 +19,7 @@
     <% movie_id = bookmark.movie.id %>
     <% list_id = List.find(Bookmark.find(bookmark.id).list_id).id %>
     <div class="card-product mt-3 ">
-      <%= image_tag https://via.placeholder.com/150 %>
+      <%= image_tag pict_url %>
       <%# <%= image_tag pict_url %> %>
       <div class="card-product-infos">
         <h2><%= bookmark.movie.title %></h2>
