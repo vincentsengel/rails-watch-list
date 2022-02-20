@@ -1,6 +1,6 @@
 .card-product {
-  position: relative;
   overflow: hidden;
+  position: relative;
   height: 120px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -44,4 +44,26 @@
 .card-product :hover .delete-icon {
   opacity: 1;
   transition: 800ms;
+}
+
+.title {
+  position: absolute;
+  top: 8px;
+  left: 136px
+}
+
+.overview {
+  position: absolute;
+  top: 24px;
+  left: 136px;
+  height: 3.5em;
+  padding-right: 16px;
+  overflow: hidden;
+}
+
+.comment {
+  position: absolute;
+  padding-right: 24px;
+  left: 136px;
+  bottom: 0px;
 }

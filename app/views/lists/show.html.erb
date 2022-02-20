@@ -20,13 +20,15 @@
     <div class="card-product mt-3 ">
       <%= image_tag pict_url %>
       <div class="card-product-infos">
-        <h2><%= bookmark.movie.title %></h2>
-        <p> <%= bookmark.movie.overview %> <br><br></p>
-        <h6> - "<%= bookmark.comment %> "</h6>
+        <h2 class='title'><%= bookmark.movie.title %></h2>
+        <div class='overview'>
+          <p> <%= bookmark.movie.overview %> <br><br></p>
+        </div>
+        <h6 class='comment'> - "<%= bookmark.comment %> "</h6>
         <%= link_to list_bookmark_path(Bookmark.find(bookmark.id)), method: :delete, data: { confirm: "this article will be deleted, continue ?"} do %>
             <i class="fas fa-trash-alt delete-icon"></i>
         <% end %>
-        </div>
+      </div>
     </div>
   <% end %>
 </div>
