@@ -12,7 +12,6 @@
   </div>
 </div>
 
-
 <div class="container mt-5 mb-5">
   <% @list.bookmarks.each do |bookmark| %>
     <% pict_url = "https://image.tmdb.org/t/p/w200/#{bookmark.movie.poster_url}" %>
@@ -25,7 +24,7 @@
         <p> <%= bookmark.movie.overview %> <br><br></p>
         <h6> - "<%= bookmark.comment %> "</h6>
         <%= link_to list_bookmark_path(Bookmark.find(bookmark.id)), method: :delete, data: { confirm: "this article will be deleted, continue ?"} do %>
-            <i class="fas fa-trash-alt"></i>
+            <i class="fas fa-trash-alt delete-icon"></i>
         <% end %>
         </div>
     </div>
